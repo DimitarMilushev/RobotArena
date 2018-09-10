@@ -1,0 +1,37 @@
+﻿@model FightResultViewModel
+<dt>
+    @Html.DisplayNameFor(model => model.CreepModel.Name)
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.CreepModel.Name)
+</dd>
+<dt>
+
+</dt>
+<dd>
+    <img src="@(Model.CreepModel.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.CreepModel.Type)
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.CreepModel.Type)
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.CreepModel.Damage)
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.CreepModel.Damage)
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.CreepModel.Health)
+</dt>
+<dd>
+    @(Model.CreepModel.Health - Model.RobotDamageDone)
+</dd>
+<dt>
+    Damage Done:
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.CreepDamageDone)
+</dd>

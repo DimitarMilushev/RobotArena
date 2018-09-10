@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create a robot</h2>
+<hr />
+<div>  
+        <a asp-controller="Robot" asp-action="CreateFireRobot" class="btn btn-danger" style="width:33%">Fire Robot</a>
+        <a asp-controller="Robot" asp-action="CreateNatureRobot" class="btn btn-success" style="width:33%">Nature Robot</a>
+        <a asp-controller="Robot" asp-action="CreateWaterRobot" class="btn btn-primary" style="width:33%">Water Robot</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,251 @@
+@model RepairViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["RepairError"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @(TempData["RepairError"])
+    </div>
+}
+@if(TempData["RepairSuccess"]!=null)
+{
+    <div class="alert alert-success" role="alert">
+        @(TempData["RepairSuccess"])
+    </div>
+}
+    <h1>
+      Weapons
+    </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WeaponsViewModel.First().Name)
+            </th>
+            <th>
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeaponsViewModel.First().DamagePoints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeaponsViewModel.First().Durability)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeaponsViewModel.First().CriticalAttackMode)
+            </th>
+            <th>
+                Repair Costs
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.WeaponsViewModel)
+        {
+            <tr>
+                
+
+
+                @{
+                    var itemInfo = new Dictionary<string, string>
+                                            {
+                                                    {"ItemId", item.Id.ToString()},
+                                                {"ItemType",item.GetType().Name.ToString()}
+                                            };
+                    string durabilityColor = "green";
+                    if(item.Durability<=30)
+                    {
+                        durabilityColor = "red";
+                    }
+                    if(item.Durability>30 && item.Durability<70)
+                    {
+                        durabilityColor = "orange";
+                    }
+
+                }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img src="@(item.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DamagePoints)
+                </td>
+                <td style="color:@(durabilityColor)">
+                    @Html.DisplayFor(modelItem => item.Durability)%
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CriticalAttackMode)
+                </td>
+                <td>
+                    <button class="btn" style="background-color:gold;color:black" onclick="repair(@((100-item.Durability)*5))">Show Costs</button>
+                </td>
+                <td>
+                    <form method="post">
+                        <div class="form-group">
+                            <input type="submit" asp-action="Repair" asp-all-route-data="itemInfo" value="Repair" class="btn" style="background-color:gold;color:black" />
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<hr />
+<h1>
+    Armors
+</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmorsViewModel.First().Name)
+            </th>
+            <th>
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmorsViewModel.First().CurrentArmor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmorsViewModel.First().ArmorPoints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmorsViewModel.First().Durability)
+            </th>
+            <th>
+                Repair Costs
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ArmorsViewModel)
+        {
+            <tr>
+                @{
+                    var itemInfo = new Dictionary<string, string>
+                                            {
+                                                    {"ItemId", item.Id.ToString()},
+                                                {"ItemType",item.GetType().Name.ToString()}
+                                            };
+                    string durabilityColor = "green";
+                    if (item.Durability <= 30)
+                    {
+                        durabilityColor = "red";
+                    }
+                    if (item.Durability > 30 && item.Durability < 70)
+                    {
+                        durabilityColor = "orange";
+                    }
+
+                }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img src="@(item.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentArmor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArmorPoints)
+                </td>
+                <td style="color:@(durabilityColor)">
+                    @Html.DisplayFor(modelItem => item.Durability)%
+                </td>
+                <td>
+                    <button class="btn" style="background-color:gold;color:black" onclick="repair(@((100-item.Durability)*5))">Show Costs</button>
+                </td>
+                <td>
+                    <form method="post">
+                        <div class="form-group">
+                            <input type="submit" asp-action="Repair" asp-all-route-data="itemInfo" value="Repair" class="btn" style="background-color:gold;color:black" />
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<h1>
+    Robots
+</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RobotsViewModel.First().Name)
+            </th>
+            <th>
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RobotsViewModel.First().CurrentHealth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RobotsViewModel.First().BaseHealth)
+            </th>           
+            <th>
+                Repair Costs   
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.RobotsViewModel)
+        {
+
+
+            <tr>
+                @{
+                    var itemInfo = new Dictionary<string, string>
+                                            {
+                                                    {"ItemId", item.Id.ToString()},
+                                                {"ItemType",item.GetType().Name.ToString()}
+                                            };
+                    string healthColor = "green";
+                    if (item.CurrentHealth <= 300)
+                    {
+                        healthColor = "red";
+                    }
+                    if (item.CurrentHealth > 30 && item.CurrentHealth < 70)
+                    {
+                        healthColor = "orange";
+                    }
+
+                }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img src="@(item.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+                </td>
+                <td style="color:@(healthColor)">
+                    @Html.DisplayFor(modelItem => item.CurrentHealth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BaseHealth)
+                </td>               
+                <td>
+                    <button class="btn" style="background-color:gold;color:black" onclick="repair(@((item.BaseHealth-item.CurrentHealth)/3))">Show Costs</button>
+                </td>
+                <td>
+                    <form method="post">
+                        <div class="form-group">
+                            <input type="submit" asp-action="Repair" asp-all-route-data="itemInfo" value="Repair" class="btn" style="background-color:gold;color:black" />
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts {
+    @{await Html.RenderPartialAsync("CoolScriptsPartial");}
+}

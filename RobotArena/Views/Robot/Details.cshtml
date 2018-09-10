@@ -1,0 +1,12 @@
+﻿@model RobotDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>    
+    @Html.DisplayForModel("RobotDisplayTemplate")
+</div>
+<a class="btn" style="background-color:gold;color:black" asp-controller="Robot" asp-action="Equip" asp-route-id="@(Model.Id)">Equip Items</a>
+

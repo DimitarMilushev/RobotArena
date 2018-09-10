@@ -1,0 +1,28 @@
+﻿@model WeaponDetailsViewModel
+
+@{
+    ViewData["Title"] = "SellWeapon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SellWeapon</h2>
+
+<div>
+    <h4>WeaponDetailsViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            @{
+                @Html.DisplayForModel("SingleWeapon")
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+   <h1 style="color:red;font-family:aria-flowto">ARE YOU SURE YOU WANT TO SELL @(Model.Name) FOR @(Model.Price/2) <span style="font-family:Georgia;color:darkgoldenrod">₡</span>?</h1>
+   <form asp-action="SellWeapon" method="post">
+       <div class="form-group">
+           <input type="submit" value="Confirm" class="btn" style="background-color:gold;color:black" />
+       </div>
+   </form>
+</div>

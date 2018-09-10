@@ -1,0 +1,243 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<User> SignInManager
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"] - RobotArena</title>
+    <environment include="Development">
+        <style>
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+                .topnav a {
+                    float: left;
+                    display: block;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                }
+
+
+                .topnav .icon {
+                    display: none;
+                    color: white;
+                }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+                .dropdown .dropbtn {
+                    font-size: 17px;
+                    border: none;
+                    outline: none;
+                    color: white;
+                    padding: 14px 16px;
+                    background-color: inherit;
+                    font-family: inherit;
+                    margin: 0;
+                }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+                .dropdown-content a {
+                    float: none;
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    text-align: left;
+                }
+
+            .topnav a:hover, .dropdown:hover .dropbtn {
+                background-color: #555;
+                color: white;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+
+            .topnav a:not(:first-child), .dropdown .dropbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: left;
+                display: block;
+            }
+
+            .topnav.responsive {
+                position: relative;
+            }
+
+                .topnav.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                .topnav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+
+                .topnav.responsive .dropdown {
+                    float: none;
+                }
+
+                .topnav.responsive .dropdown-content {
+                    position: relative;
+                }
+
+                .topnav.responsive .dropdown .dropbtn {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                }
+        </style>
+        
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/assets/css/ionicons.css" rel="stylesheet" />
+        <link href="~/assets/css/magnific-popup.css" rel="stylesheet" />
+        <link href="~/assets/css/main.css" rel="stylesheet" />
+        <link href="~/assets/css/owl.carousel.css" rel="stylesheet" />
+        <link href="~/assets/css/owl.carousel.theme.min.css" rel="stylesheet" />
+
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+
+    @if (SignInManager.IsSignedIn(User))
+    {<div class="topnav" id="myTopnav">
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="dropdown">
+            <button class="dropbtn">
+                Admin
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a asp-area="Admin" asp-page="/Weapon/CreateWeapon">Create Weapon</a>
+                <a asp-area="Admin" asp-page="/Creep/CreateCreep">Create Creep</a>
+                <a asp-area="Admin" asp-page="/Armor/CreateArmor">Create Armor</a>
+                <a asp-area="Admin" asp-page="/Weapon/AllWeapons">All Weapons</a>
+                <a asp-area="Admin" asp-page="/Creep/AllCreeps">All Creeps</a>
+                <a asp-area="Admin" asp-page="/Armor/AllArmors" >All Armors</a>
+            </div>
+        </div>
+    }
+    <div class="dropdown">
+        <button class="dropbtn">
+            User
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a asp-area="" asp-controller="Robot" asp-action="Create">Create a robot</a>
+            <a asp-area="" asp-controller="Users" asp-action="AllRobots">All Robots</a>
+            <a asp-area="" asp-controller="Battle" asp-action="Index">Enter The Arena</a>
+            <a asp-area="" asp-controller="Store" asp-action="Index">Store</a>
+            <a asp-area="" asp-controller="RepairCenter" asp-action="Index">Repair Your Items</a>
+            <a asp-area="" asp-controller="Users" asp-action="Items">Sell Your Items</a>
+        </div>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+    }
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">RobotArena</a>
+            </div>
+            <partial name="_LoginPartial" />
+        </div>
+
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - RobotArena</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/assets/js/bootstrap.min.js"></script>
+        <script src="~/assets/js/jquery-1.12.3.min.js"></script>
+        <script src="~/assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="~/assets/js/owl.carousel.min.js"></script>
+        <script src="~/assets/js/script.js"></script>      
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

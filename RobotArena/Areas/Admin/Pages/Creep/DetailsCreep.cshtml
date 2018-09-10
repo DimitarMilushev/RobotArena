@@ -1,0 +1,18 @@
+﻿@page "{id}"
+@model DetailsCreepModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Creep Details</h1>
+
+<hr />
+<div>      
+        @Html.DisplayForModel("CreepDisplayTemplate")
+</div>
+<div>
+    <a asp-page="./EditCreep" asp-route-id="@Model.Creep.Id">Edit</a> |
+    <a asp-page="./AllCreeps">Back to List</a>
+</div>

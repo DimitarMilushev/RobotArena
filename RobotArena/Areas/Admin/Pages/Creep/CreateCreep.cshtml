@@ -1,0 +1,56 @@
+﻿@page
+@model CreateCreepModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create a creep</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Creep.Name" class="control-label"></label>
+                <input asp-for="Creep.Name" class="form-control" />
+                <span asp-validation-for="Creep.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Creep.Type" class="control-label"></label>
+                <select asp-for="Creep.Type" asp-items="Model.Types" class="form-control">                   
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Creep.Health" class="control-label"></label>
+                <input asp-for="Creep.Health" class="form-control" />
+                <span asp-validation-for="Creep.Health" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Creep.Damage" class="control-label"></label>
+                <input asp-for="Creep.Damage" class="form-control" />
+                <span asp-validation-for="Creep.Damage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Creep.ImageUrl" class="control-label"></label>
+                <input asp-for="Creep.ImageUrl" class="form-control" />
+                <span asp-validation-for="Creep.ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Creep.Bounty" class="control-label"></label>
+                <input asp-for="Creep.Bounty" class="form-control" />
+                <span asp-validation-for="Creep.Bounty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+</div>
+</div>
+
+<div>
+    <a asp-page="./AllCreeps">Back to List</a>
+</div>
+

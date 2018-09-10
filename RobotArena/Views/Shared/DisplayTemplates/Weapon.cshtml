@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WeaponDetailsViewModel>
+@foreach (var weapon in Model)
+{     <div>
+          <dl class="dl-horizontal">
+              <dt>
+                  @Html.DisplayNameFor(model => weapon.Name)
+              </dt>
+              <dd>
+                  @(weapon.Name)
+              </dd>
+              <dt>
+                
+              </dt>
+              <dd>
+                  <img src="@(weapon.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+              </dd>
+              <dt>
+                  @Html.DisplayNameFor(model => weapon.DamagePoints)
+              </dt>
+              <dd>
+                  @(weapon.CurrentDamage)
+              </dd>
+              <dt>
+                  @Html.DisplayNameFor(model => weapon.Durability)
+              </dt>
+              <dd>
+                  @(weapon.Durability)
+              </dd>
+              <dt>
+                  @Html.DisplayNameFor(model => weapon.CriticalAttackMode)
+              </dt>
+              <dd>
+                  @(weapon.CriticalAttackMode)
+              </dd>
+          </dl>
+        </div>
+}
+

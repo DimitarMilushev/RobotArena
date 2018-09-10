@@ -1,0 +1,80 @@
+﻿@model RobotDetailsViewModel
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Type)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Type)
+    </dd>
+    <dt>
+       
+    </dt>
+    <dd>
+        <img src="@(Model.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+    </dd>
+    <dt>
+        Health
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.CurrentHealth)/ @Html.DisplayFor(model => model.BaseHealth)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.BaseDamage)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.BaseDamage)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.TotalDamage)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.TotalDamage)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.DamageReduction)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.DamageReduction)%
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Wins)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Wins)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Losses)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Losses)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.RankPlace)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.RankPlace)
+    </dd>
+</dl>
+<h1>
+    @Html.DisplayNameFor(model => model.Weapons) :
+</h1>
+<ul>
+    @{
+        @Html.DisplayFor(a => a.Weapons, "Weapon")
+    }
+</ul>
+<h1>
+    @Html.DisplayNameFor(model => model.Armors) :
+</h1>
+<ul>
+    @{
+
+        @Html.DisplayFor(a => a.Armors, "Armor")
+    }
+</ul>

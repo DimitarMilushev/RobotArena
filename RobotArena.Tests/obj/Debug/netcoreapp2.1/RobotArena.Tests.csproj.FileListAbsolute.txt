@@ -1,0 +1,54 @@
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.deps.json
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.runtimeconfig.json
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.runtimeconfig.dev.json
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.csprojAssemblyReference.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.AssemblyInfoInputs.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.AssemblyInfo.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Views.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Views.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Common.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Data.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Models.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Services.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Data.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Services.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Common.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Models.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.csproj.CopyComplete
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Views.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Views.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.deps.json
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.runtimeconfig.json
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.runtimeconfig.dev.json
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Tests.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Common.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Data.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Models.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Services.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Services.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Common.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Data.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\bin\Debug\netcoreapp2.1\RobotArena.Models.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.csprojAssemblyReference.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.AssemblyInfoInputs.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.AssemblyInfo.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.csproj.CopyComplete
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena.Tests\obj\Debug\netcoreapp2.1\RobotArena.Tests.pdb

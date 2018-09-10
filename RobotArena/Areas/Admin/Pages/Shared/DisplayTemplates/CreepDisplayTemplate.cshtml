@@ -1,0 +1,45 @@
+﻿@model DetailsCreepModel
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Creep.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Creep.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Creep.Type)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Creep.Type)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Creep.ImageUrl)
+    </dt>
+    <dd>
+        <img src="@(Model.Creep.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Creep.ImageUrl)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Creep.Bounty)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Creep.Health)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Creep.Health)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Creep.Damage)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Creep.Damage)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Creep.Bounty)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Creep.Bounty) <span style="font-family:Georgia;color:darkgoldenrod">₡</span>
+    </dd>
+</dl>

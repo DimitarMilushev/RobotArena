@@ -1,0 +1,30 @@
+﻿@model FightResultViewModel
+@{
+    ViewData["Title"] = "Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{var robotColor = Model.RobotIsAlive ? "green" : "red";
+    var robotResult = Model.RobotIsAlive ? "WINNER" : "LOSER";
+    var creepColor = Model.CreepIsAlive ? "green" : "red";
+    var creepResult = Model.CreepIsAlive ? "WINNER" : "LOSER";
+
+}
+<h2 style="font-family:Georgia">FIGHT FINISHED IN @(Model.RoundsCount) ROUNDS</h2>
+<div class="row">
+    <div class="col-lg-6">
+        <h1 style="color:@(robotColor)">
+            @robotResult
+        </h1>
+        <dl class="dl-horizontal" style="color:@(robotColor)">
+            @{await Html.RenderPartialAsync("ResultRobotPartialView");}
+        </dl>
+    </div>
+    <div class="col-lg-6">
+        <h1 style="color:@(creepColor)">
+            @creepResult
+        </h1>
+        <dl class="dl-horizontal" style="color:@(creepColor)">
+            @{await Html.RenderPartialAsync("ResultCreepPartialView");}
+        </dl>
+    </div>
+</div>

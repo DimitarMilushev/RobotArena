@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobotArena", "RobotArena\RobotArena.csproj", "{32AF6B82-E3F1-44C9-837A-7BA81E8EC5DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobotArena.Data", "RobotArena.Data\RobotArena.Data.csproj", "{E5B00E0E-871C-4674-9357-A7289EB477A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobotArena.Models", "RobotArena.Models\RobotArena.Models.csproj", "{4679A04F-0461-4863-AA04-7EC4EF6E6497}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobotArena.Services", "RobotArena.Services\RobotArena.Services.csproj", "{FFF1701D-B07D-47D2-A2B4-C86898378A15}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobotArena.Common", "RobotArena.Common\RobotArena.Common.csproj", "{53CB6FE5-7F41-4BE0-8791-E168B42F82D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotArena.Tests", "RobotArena.Tests\RobotArena.Tests.csproj", "{8B411810-9126-4E16-8813-404792FAE614}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32AF6B82-E3F1-44C9-837A-7BA81E8EC5DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AF6B82-E3F1-44C9-837A-7BA81E8EC5DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AF6B82-E3F1-44C9-837A-7BA81E8EC5DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AF6B82-E3F1-44C9-837A-7BA81E8EC5DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B00E0E-871C-4674-9357-A7289EB477A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B00E0E-871C-4674-9357-A7289EB477A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B00E0E-871C-4674-9357-A7289EB477A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B00E0E-871C-4674-9357-A7289EB477A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4679A04F-0461-4863-AA04-7EC4EF6E6497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4679A04F-0461-4863-AA04-7EC4EF6E6497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4679A04F-0461-4863-AA04-7EC4EF6E6497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4679A04F-0461-4863-AA04-7EC4EF6E6497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF1701D-B07D-47D2-A2B4-C86898378A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF1701D-B07D-47D2-A2B4-C86898378A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF1701D-B07D-47D2-A2B4-C86898378A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF1701D-B07D-47D2-A2B4-C86898378A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CB6FE5-7F41-4BE0-8791-E168B42F82D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CB6FE5-7F41-4BE0-8791-E168B42F82D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CB6FE5-7F41-4BE0-8791-E168B42F82D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CB6FE5-7F41-4BE0-8791-E168B42F82D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B411810-9126-4E16-8813-404792FAE614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B411810-9126-4E16-8813-404792FAE614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B411810-9126-4E16-8813-404792FAE614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B411810-9126-4E16-8813-404792FAE614}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24203D94-6FFB-4C5F-8D9F-0C3EED2FEDBF}
+	EndGlobalSection
+EndGlobal

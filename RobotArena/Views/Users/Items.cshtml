@@ -1,0 +1,120 @@
+﻿@model UserAllItemsViewModel
+
+@{
+    ViewData["Title"] = "Items";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["Sell"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @(TempData["Sell"])
+    </div>
+}
+<h1>
+    Weapons
+</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.First().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.First().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.First().ImageUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.First().CurrentDamage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.First().Durability)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.First().CriticalAttackMode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Weapons)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img src="@(item.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentDamage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Durability)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CriticalAttackMode)
+                </td>
+                <td>
+                    <a class="btn" style="background-color:gold;color:black" asp-controller="Store" asp-action="SellWeapon" asp-route-id="@(item.Id)">Sell</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<hr />
+<h1>
+    Armors
+</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Armors.First().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Armors.First().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Armors.First().ImageUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Armors.First().ArmorPoints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Armors.First().Durability)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Armors)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img src="@(item.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArmorPoints)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Durability)
+                </td>
+                <td>
+                    <a class="btn" style="background-color:gold;color:black" asp-controller="Store" asp-action="SellArmor" asp-route-id="@(item.Id)">Sell</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

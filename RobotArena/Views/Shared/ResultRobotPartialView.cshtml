@@ -1,0 +1,58 @@
+﻿@model FightResultViewModel
+<dt>
+    @Html.DisplayNameFor(model => model.RobotModel.Name)
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.RobotModel.Name)
+</dd>
+<dt>
+
+</dt>
+<dd>
+    <img src="@(Model.RobotModel.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.RobotModel.Type)
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.RobotModel.Type)
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.RobotModel.TotalDamage)
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.RobotModel.TotalDamage)
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.RobotModel.CurrentHealth)
+</dt>
+<dd>
+    @(Model.RobotModel.CurrentHealth)/@(Model.RobotModel.BaseHealth)
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.RobotModel.DamageReduction)
+</dt>
+@if (Model.RobotReducedDamage == 0)
+{
+    <dd>
+        0%
+    </dd>
+}
+else
+{
+    <dd>
+        @Html.DisplayFor(model => model.RobotModel.DamageReduction)%
+    </dd>
+}
+<dt>
+    Reduced damage
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.RobotReducedDamage)
+</dd>
+<dt>
+    Damage Done
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.RobotDamageDone)
+</dd>

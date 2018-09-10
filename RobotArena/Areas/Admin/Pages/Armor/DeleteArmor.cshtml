@@ -1,0 +1,53 @@
+﻿@page "{id}"
+@model DeleteArmorModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Are you sure you want to delete @(Model.Armor.Name) ?</h1>
+
+<hr />
+<div>
+    <h4>Armor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Armor.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.ImageUrl)
+        </dt>
+        <dd>
+            <img src="@(Model.Armor.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.ArmorPoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Armor.ArmorPoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.DurabilityLossAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Armor.DurabilityLossAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Armor.Price) <span style="font-family:Georgia;color:darkgoldenrod">₡</span>
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Armor.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./AllArmors">Back to List</a>
+    </form>
+</div>

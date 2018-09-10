@@ -1,0 +1,50 @@
+﻿@page "{id}"
+@model DetailsArmorModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Armor Details</h1>
+
+<hr />
+<div>  
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Armor.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.ImageUrl)
+        </dt>
+        <dd>
+            <img src="@(Model.Armor.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.ArmorPoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Armor.ArmorPoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.DurabilityLossAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Armor.DurabilityLossAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Armor.Price) <span style="font-family:Georgia;color:darkgoldenrod">₡</span>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-danger" asp-page="./EditArmor" asp-route-id="@Model.Armor.Id">Edit</a>
+    <a asp-page="./AllArmors">Back to List</a>
+</div>

@@ -1,0 +1,52 @@
+﻿@page
+
+@model CreateArmorModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create an armor</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Armor.Name" class="control-label"></label>
+                <input asp-for="Armor.Name" class="form-control" />
+                <span asp-validation-for="Armor.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Armor.ArmorPoints" class="control-label"></label>
+                <input asp-for="Armor.ArmorPoints" class="form-control" />
+                <span asp-validation-for="Armor.ArmorPoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Armor.DurabilityLossAmount" class="control-label"></label>
+                <input asp-for="Armor.DurabilityLossAmount" class="form-control" />
+                <span asp-validation-for="Armor.DurabilityLossAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Armor.ImageUrl" class="control-label"></label>
+                <input asp-for="Armor.ImageUrl" class="form-control" />
+                <span asp-validation-for="Armor.ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Armor.Price" class="control-label"></label>
+                <input asp-for="Armor.Price" class="form-control" />
+                <span asp-validation-for="Armor.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./AllArmors">Back to List</a>
+</div>
+

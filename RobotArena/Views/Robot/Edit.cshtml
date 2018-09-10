@@ -1,0 +1,25 @@
+﻿@model UpdateNameBindingModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["InvalidName"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @(TempData["InvalidName"])
+    </div>
+}
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label asp-for="Name" class="control-label"></label>:
+            @Html.EditorFor(m => Model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>

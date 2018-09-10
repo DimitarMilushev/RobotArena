@@ -1,0 +1,180 @@
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.deps.json
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.runtimeconfig.json
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.runtimeconfig.dev.json
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Views.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Views.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.csprojAssemblyReference.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.csproj.CoreCompileInputs.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorAssemblyInfo.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorAssemblyInfo.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.AssemblyInfoInputs.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.AssemblyInfo.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.TagHelpers.input.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.TagHelpers.output.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorCoreGenerate.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorTargetAssemblyInfo.cache
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorTargetAssemblyInfo.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.Views.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.csproj.CopyComplete
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Data.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Models.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Data.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Models.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Create.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Users\AllRobots.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Details.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Delete.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Edit.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\Error.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\_ViewImports.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\_ViewStart.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\Weapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\Armor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\Armors.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\Index.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\Weapons.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\SingleWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\BuyWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\SingleArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\BuyArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Users\Items.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\SellWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\SellArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\RobotDisplayTemplate.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\DisplayTemplates\CreepDisplayTemplate.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Equip.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Battle\Index.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Battle\Fight.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Battle\Result.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\RepairCenter\Index.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CoolScriptsPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Common.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Common.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\AllArmors.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\CreateArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\DeleteArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\DetailsArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\EditArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\AllCreeps.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\CreateCreep.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\DeleteCreep.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\DetailsCreep.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\EditCreep.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\AllWeapons.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\CreateWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\DeleteWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\DetailsWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\EditWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Services.dll
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Services.pdb
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_LoginPartial - Copy.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ResultRobotPartialView.g.cshtml.cs
+C:\Users\Lubomir\Desktop\RobotArena\RobotArena\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ResultCreepPartialView.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.deps.json
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.runtimeconfig.json
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.runtimeconfig.dev.json
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Views.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Views.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Common.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Data.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Models.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Services.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Common.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Data.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Models.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\bin\Debug\netcoreapp2.1\RobotArena.Services.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.csprojAssemblyReference.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.csproj.CoreCompileInputs.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorAssemblyInfo.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorAssemblyInfo.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.AssemblyInfoInputs.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.AssemblyInfo.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.TagHelpers.input.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.TagHelpers.output.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorCoreGenerate.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\AllArmors.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\CreateArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\DeleteArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\DetailsArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Armor\EditArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\AllCreeps.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\CreateCreep.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\DeleteCreep.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\DetailsCreep.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Creep\EditCreep.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\DisplayTemplates\CreepDisplayTemplate.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\Error.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_LoginPartial - Copy.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\AllWeapons.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\CreateWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\DeleteWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\DetailsWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\Weapon\EditWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\_ViewImports.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Pages\_ViewStart.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Battle\Fight.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Battle\Index.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Battle\Result.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\RepairCenter\Index.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Create.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Delete.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Details.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Edit.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Robot\Equip.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CoolScriptsPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\Armor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\RobotDisplayTemplate.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\SingleArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\SingleWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\Weapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ResultCreepPartialView.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ResultRobotPartialView.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\Armors.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\BuyArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\BuyWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\Index.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\SellArmor.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\SellWeapon.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Store\Weapons.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Users\AllRobots.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\Users\Items.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorTargetAssemblyInfo.cache
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.RazorTargetAssemblyInfo.cs
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.Views.pdb
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.csproj.CopyComplete
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.dll
+C:\Users\Lubomir\Desktop\Project Defense\RobotArena-master\RobotArena\obj\Debug\netcoreapp2.1\RobotArena.pdb

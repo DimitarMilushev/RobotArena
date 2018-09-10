@@ -1,0 +1,73 @@
+@model RobotsFightViewModel
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Fight</h2>
+<div class="row">
+    <div class="column" style="width:33%"></div>
+    <div class="column" style="width:33%"></div>
+    <div class="column" style="width:33%"></div>
+</div>
+
+<h1 style="font-family:Georgia">CHOOSE YOUR FIGHTER</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FightModel.First().Name)
+            </th>
+            <th>
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FightModel.First().Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FightModel.First().CurrentHealth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FightModel.First().TotalDamage)
+            </th>                   
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.FightModel)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <img src="@(item.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @(item.CurrentHealth) / @(item.BaseHealth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalDamage)
+            </td>           
+            <td>
+                @{
+                    var robotAndCreepId = new Dictionary<string, string>
+                        {
+                                {"RobotId", item.Id.ToString()},
+                            {"CreepId",Model.CreepId.ToString() }
+                        };
+                }
+                <form method="post">
+                    <div class="form-group">
+                        <input type="submit" asp-action="Fight" asp-all-route-data="robotAndCreepId" value="Test your might" class="btn" style="background-color:gold;color:black" />
+                    </div>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

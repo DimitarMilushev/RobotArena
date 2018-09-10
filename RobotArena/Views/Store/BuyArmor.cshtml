@@ -1,0 +1,31 @@
+﻿@model ArmorDetailsViewModel
+
+@{
+    ViewData["Title"] = "BuyArmor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>BuyArmor</h2>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            @{
+                @Html.DisplayForModel("SingleArmor")
+            }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price) <span style="font-family:Georgia;color:darkgoldenrod">₡</span>
+        </dt>
+        <dd>
+            @(Model.Price)
+        </dd>
+    </dl>
+</div>
+<h1 style="color:red;font-family:aria-flowto">ARE YOU SURE YOU WANT TO BUY @(Model.Name) FOR @(Model.Price) COINS?</h1>
+<form asp-action="BuyArmor" method="post">
+    <div class="form-group">
+        <input type="submit" value="Purchase" class="btn" style="background-color:gold;color:black" />
+    </div>
+</form>

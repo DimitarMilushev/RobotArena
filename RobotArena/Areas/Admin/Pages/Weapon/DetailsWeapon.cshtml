@@ -1,0 +1,55 @@
+﻿@page "{id}"
+@model DetailsWeaponModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Weapon Details</h1>
+
+<hr />
+<div>    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Weapon.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weapon.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weapon.ImageUrl)
+        </dt>
+        <dd>
+            <img src="@(Model.Weapon.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weapon.DamagePoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weapon.DamagePoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weapon.DurabilityLossAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weapon.DurabilityLossAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weapon.CriticalAttackMode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weapon.CriticalAttackMode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weapon.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weapon.Price) <span style="font-family:Georgia;color:darkgoldenrod">₡</span>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./EditWeapon" asp-route-id="@Model.Weapon.Id">Edit</a> |
+    <a asp-page="./AllWeapons">Back to List</a>
+</div>

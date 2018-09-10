@@ -1,0 +1,34 @@
+﻿@model WeaponDetailsViewModel
+<div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @(Model.Name)
+            </dd>
+            <dd>
+                <img src="@(Model.ImageUrl)" alt="HTML5 Icon" style="width:128px;height:128px;">
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DamagePoints)
+            </dt>
+            <dd>
+                @(Model.DamagePoints)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Durability)
+            </dt>
+            <dd>
+                @(Model.Durability)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CriticalAttackMode)
+            </dt>
+            <dd>
+                @(Model.CriticalAttackMode)
+            </dd>
+        </dl>
+    </div>
+
+
