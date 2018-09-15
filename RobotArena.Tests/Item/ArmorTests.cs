@@ -10,7 +10,11 @@ using RobotArena.Controllers;
 using RobotArena.Data;
 using RobotArena.Models;
 using RobotArena.Models.Items;
+using RobotArena.Services.ArmorServices;
+using RobotArena.Services.ContextServices;
 using RobotArena.Services.RobotServices;
+using RobotArena.Services.RobotServices.Interfaces;
+using RobotArena.Services.WeaponServices;
 using RobotArena.Tests.Mocks;
 using System;
 using System.Collections.Generic;
@@ -21,11 +25,14 @@ namespace RobotArena.Tests.Item
 {  [TestClass]
     public class ArmorTests
     {
-        private RobotContext dbContext;
-        private RobotDataService service;
-        
+        private RobotContext dbContext;       
+        private ArmorDataService armorService;
+        private WeaponDataService weaponService;
+        private readonly RobotDataService service;
+        private DbContextService dbContextService;
+
         [TestMethod]
-      public void SellArmor_ShouldIncreaseUserCoins()
+      public async void SellArmor_ShouldIncreaseUserCoins()
         {
             var users = new[]
               {
@@ -43,7 +50,11 @@ namespace RobotArena.Tests.Item
                 mockUserStore.Object, null, null, null, null, null, null, null, null);
             mockUserManager.Setup(um => um.GetUserAsync(null))
                     .ReturnsAsync(users[1]);
-            var controller = new StoreController(mockUserManager.Object, this.dbContext, MockAutoMapper.GetAutoMapper());
+            this.armorService = new ArmorDataService(dbContext, this.service, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.weaponService = new WeaponDataService(dbContext, this.service, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.dbContextService = new DbContextService(dbContext, this.service, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+
+            var controller = new StoreController(mockUserManager.Object,this.weaponService,this.armorService, this.dbContextService, MockAutoMapper.GetAutoMapper());
             controller.ControllerContext = new ControllerContext()
             {
                 HttpContext = new DefaultHttpContext()
@@ -85,7 +96,7 @@ namespace RobotArena.Tests.Item
             };
             this.dbContext.Armors.Add(actualArmor);
             this.dbContext.SaveChanges();
-            controller.SellArmorPost(1);
+            await controller.SellArmorPost(1);
             Assert.AreEqual(60, newwwwUser.Coins);
 
         }

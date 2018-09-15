@@ -9,6 +9,7 @@ using RobotArena.Services.RobotServices.Interfaces;
 using RobotArena.Services.WeaponServices.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,6 +34,21 @@ namespace RobotArena.Services.WeaponServices
 
             return weaponFromDB;
         }
+        public async Task<Weapon> GetWeaponWithOwnerByIdFromDatabaseAsync(int Id)
+        {
+            //var robot = context.Robots.FirstOrDefault(r => r.Id == RobotId);
+            var weaponFromDB = await DbContext.Weapons.Include(a => a.User).FirstOrDefaultAsync(a => a.Id == Id);
+
+            return weaponFromDB;
+        }
+        public async Task<List<Weapon>> GetWeaponsForStoreAsync()
+        {
+            //var robot = context.Robots.FirstOrDefault(r => r.Id == RobotId);
+            var weapons = await this.DbContext.Weapons.Where(w => w.UserId == null).ToListAsync();
+
+            return weapons;
+        }
+     
         public async Task<string> UnequipWeaponAsync(int RobotId, int WeaponId)
         {
             var robot = await robotDataService.GetRobotByIdAsync(RobotId);

@@ -17,8 +17,8 @@ namespace RobotArena.Tests.Home
         [TestMethod]
         public void Index_ShouldReturnView()
         {
-            dbContext = MockDbContext.GetContext();
-            var controller = new HomeController(dbContext);
+           
+            var controller = new HomeController();
             // Act
             var result =  controller.Index();
 

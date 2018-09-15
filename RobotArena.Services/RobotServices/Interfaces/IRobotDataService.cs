@@ -24,5 +24,6 @@ namespace RobotArena.Services.RobotServices.Interfaces
         Task EditRobotAsync(int Id, UpdateNameBindingModel model);
         Task DeleteRobotAsync(int Id);
         void CreateRobotAsync(ClaimsPrincipal userPrincipal, Robot robot);
+        Task<Robot> GetRobotWithOwnerByIdFromDatabaseAsync(int Id);
     }
 }

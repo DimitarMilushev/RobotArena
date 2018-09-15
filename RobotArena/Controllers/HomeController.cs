@@ -11,10 +11,10 @@ namespace RobotArena.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly RobotContext context;
-        public HomeController(RobotContext Context)
+        
+        public HomeController()
         {
-            this.context = Context;
+         
         }
         public IActionResult Index()
         {

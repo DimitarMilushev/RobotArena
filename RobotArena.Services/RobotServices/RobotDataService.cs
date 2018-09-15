@@ -34,7 +34,7 @@ namespace RobotArena.Services.RobotServices
         {
             
             var userFromDB = await this.userManager.GetUserAsync(user);
-         
+        
             var currentUser =await DbContext.Users.Include(u => u.Robots).FirstOrDefaultAsync(u => u.Id == userFromDB.Id);
           
             var robots = currentUser.Robots.Where(r => r.CurrentHealth > 0).ToList();
@@ -81,6 +81,7 @@ namespace RobotArena.Services.RobotServices
             {
                 return null;
             }
+            //TODO GetEquippedUserById(int Id)
             var currentUser = await userManager.GetUserAsync(userPrincipal);
             var user = await DbContext.Users.Include(a => a.Armors).Include(w => w.Weapons).FirstOrDefaultAsync(u => u.Id == currentUser.Id);
             if(user == null)
@@ -127,6 +128,12 @@ namespace RobotArena.Services.RobotServices
             var robot = await DbContext.Robots.Include(r=>r.Armors).Include(r=>r.Weapons).FirstOrDefaultAsync(r => r.Id == Id);
             return robot;
         }
+        public async Task<Robot> GetRobotWithOwnerByIdFromDatabaseAsync(int Id)
+        {
+            //var robot = context.Robots.FirstOrDefault(r => r.Id == RobotId);
+            var robotFromDB = await DbContext.Robots.Include(a => a.Owner).FirstOrDefaultAsync(a => a.Id == Id);
 
+            return robotFromDB;
+        }
     }
 }

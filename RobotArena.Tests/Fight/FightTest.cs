@@ -10,7 +10,11 @@ using RobotArena.Data;
 using RobotArena.Models;
 using RobotArena.Models.Items;
 using RobotArena.Models.NPC;
+using RobotArena.Services.ArmorServices;
+using RobotArena.Services.ContextServices;
+using RobotArena.Services.CreepServices;
 using RobotArena.Services.RobotServices;
+using RobotArena.Services.WeaponServices;
 using RobotArena.Tests.Mocks;
 using System;
 using System.Collections.Generic;
@@ -24,10 +28,13 @@ namespace RobotArena.Tests.Fight
     public class FightTest
     {
         private RobotContext dbContext;
-        private RobotDataService service;
-        private UserManager<User> manager;
+        private RobotDataService service;     
+        private ArmorDataService armorService;
+        private WeaponDataService weaponService;
+        private CreepDataService creepService;
+        private DbContextService dbContextService;
         [TestMethod]
-        public void Fight_ShouldDecreaseRobotPoints()
+        public async void Fight_ShouldDecreaseRobotPoints()
         {
             var users = new[]
 {
@@ -46,6 +53,10 @@ namespace RobotArena.Tests.Fight
 
             this.dbContext = MockDbContext.GetContext();
             this.service = new RobotDataService(dbContext, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.armorService = new ArmorDataService(dbContext, this.service, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.weaponService = new WeaponDataService(dbContext, this.service, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.creepService = new CreepDataService(dbContext, this.service, MockAutoMapper.GetAutoMapper());
+            this.dbContextService = new DbContextService(dbContext, this.service, MockAutoMapper.GetAutoMapper(),mockUserManager.Object);
 
 
 
@@ -72,7 +83,14 @@ namespace RobotArena.Tests.Fight
                 ImageUrl = "1"
             };
 
-            var controller = new BattleController(mockUserManager.Object, this.dbContext, MockAutoMapper.GetAutoMapper(), this.service);
+            var controller = new BattleController
+                (
+                mockUserManager.Object,                
+                MockAutoMapper.GetAutoMapper(),
+                this.service,
+                this.creepService,
+                this.dbContextService
+                );
             controller.ControllerContext = new ControllerContext()
             {
                 HttpContext = new DefaultHttpContext()
@@ -86,7 +104,7 @@ namespace RobotArena.Tests.Fight
             this.dbContext.Robots.Add(robot);
             this.dbContext.Creeps.Add(creep);
             this.dbContext.SaveChanges();
-            controller.Fight(robot.Id, creep.Id);
+            await controller.Fight(robot.Id, creep.Id);
             Assert.AreEqual(0, robot.CurrentHealth);
         }
       

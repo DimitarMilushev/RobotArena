@@ -9,7 +9,12 @@ using RobotArena.Controllers;
 using RobotArena.Data;
 using RobotArena.Models;
 using RobotArena.Models.Items;
+using RobotArena.Services.ArmorServices;
+using RobotArena.Services.ContextServices;
+using RobotArena.Services.CreepServices;
 using RobotArena.Services.RobotServices;
+using RobotArena.Services.UserSerices;
+using RobotArena.Services.WeaponServices;
 using RobotArena.Tests.Mocks;
 using System;
 using System.Collections.Generic;
@@ -23,9 +28,13 @@ namespace RobotArena.Tests.Repair
     {
         private RobotContext dbContext;
         private RobotDataService service;
-        private UserManager<User> manager;
+        private ArmorDataService armorService;
+        private WeaponDataService weaponService;
+        private CreepDataService creepService;
+        private DbContextService dbContextService;
+        private UserDataService userService;
         [TestMethod]
-        public void RepairCenter_ShouldRepairArmor()
+        public async void RepairCenter_ShouldRepairArmor()
         {
             var users = new[]
                 {
@@ -33,8 +42,7 @@ namespace RobotArena.Tests.Repair
                 new User() { Id = "222" },
                 new User() { Id = "333" },
                 new User() { Id = "444" }
-            };
-            this.dbContext = MockDbContext.GetContext();
+            };      
 
 
 
@@ -45,9 +53,15 @@ namespace RobotArena.Tests.Repair
                 mockUserStore.Object, null, null, null, null, null, null, null, null);
             mockUserManager.Setup(um => um.GetUserAsync(null))
                     .ReturnsAsync(users[1]);
-            
-          
-            var controller = new RepairCenterController(mockUserManager.Object, this.dbContext, MockAutoMapper.GetAutoMapper());
+            this.dbContext = MockDbContext.GetContext();
+            this.service = new RobotDataService(dbContext, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.armorService = new ArmorDataService(dbContext, this.service, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.weaponService = new WeaponDataService(dbContext, this.service, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.creepService = new CreepDataService(dbContext, this.service, MockAutoMapper.GetAutoMapper());
+            this.dbContextService = new DbContextService(dbContext, this.service, MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+            this.userService = new UserDataService(dbContext,MockAutoMapper.GetAutoMapper(), mockUserManager.Object);
+
+            var controller = new RepairCenterController(mockUserManager.Object,MockAutoMapper.GetAutoMapper(),dbContextService,this.service,armorService,weaponService,userService);
             controller.ControllerContext = new ControllerContext()
             {
                 HttpContext = new DefaultHttpContext()
@@ -88,7 +102,7 @@ namespace RobotArena.Tests.Repair
             };
             this.dbContext.Armors.Add(actualArmor);
             this.dbContext.SaveChanges();
-            controller.Repair(1, "ArmorRepairViewModel");
+           await controller.Repair(1, "ArmorRepairViewModel");
             Assert.AreEqual(1, newwwwUser.Coins);
         }
     }

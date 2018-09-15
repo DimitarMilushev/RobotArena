@@ -12385,11 +12385,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena\\RobotArena.csproj",
+      "projectUniqueName": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena\\RobotArena.csproj",
       "projectName": "RobotArena",
-      "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena\\RobotArena.csproj",
+      "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena\\RobotArena.csproj",
       "packagesPath": "C:\\Users\\Lubomir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena\\obj\\",
+      "outputPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12408,17 +12408,17 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Common\\RobotArena.Common.csproj": {
-              "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Common\\RobotArena.Common.csproj"
+            "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Common\\RobotArena.Common.csproj": {
+              "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Common\\RobotArena.Common.csproj"
             },
-            "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Data\\RobotArena.Data.csproj": {
-              "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Data\\RobotArena.Data.csproj"
+            "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Data\\RobotArena.Data.csproj": {
+              "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Data\\RobotArena.Data.csproj"
             },
-            "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Models\\RobotArena.Models.csproj": {
-              "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Models\\RobotArena.Models.csproj"
+            "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Models\\RobotArena.Models.csproj": {
+              "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Models\\RobotArena.Models.csproj"
             },
-            "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Services\\RobotArena.Services.csproj": {
-              "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Services\\RobotArena.Services.csproj"
+            "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Services\\RobotArena.Services.csproj": {
+              "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Services\\RobotArena.Services.csproj"
             }
           }
         }

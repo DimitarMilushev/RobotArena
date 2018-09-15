@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RobotArena.Common.Models.BindingModels.Armor;
 using RobotArena.Data;
@@ -9,6 +10,7 @@ using RobotArena.Services.ArmorServices.Interfaces;
 using RobotArena.Services.RobotServices.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -79,6 +81,20 @@ namespace RobotArena.Services.ArmorServices
 
             return armorFromDB;
         }
+        public async Task<Armor> GetArmorWithOwnerByIdFromDatabaseAsync(int Id)
+        {
+            //var robot = context.Robots.FirstOrDefault(r => r.Id == RobotId);
+            var armorFromDB = await DbContext.Armors.Include(a => a.User).FirstOrDefaultAsync(a => a.Id == Id);
 
+            return armorFromDB;
+        }
+        public async Task<List<Armor>> GetArmorsForStoreAsync()
+        {
+            //var robot = context.Robots.FirstOrDefault(r => r.Id == RobotId);
+            var armors = await this.DbContext.Armors.Where(w => w.UserId == null).ToListAsync();
+
+            return armors;
+        }
+       
     }
 }

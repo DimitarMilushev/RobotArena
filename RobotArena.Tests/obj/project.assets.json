@@ -13309,11 +13309,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Tests\\RobotArena.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Tests\\RobotArena.Tests.csproj",
       "projectName": "RobotArena.Tests",
-      "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Tests\\RobotArena.Tests.csproj",
+      "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Tests\\RobotArena.Tests.csproj",
       "packagesPath": "C:\\Users\\Lubomir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13332,11 +13332,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Services\\RobotArena.Services.csproj": {
-              "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Services\\RobotArena.Services.csproj"
+            "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Services\\RobotArena.Services.csproj": {
+              "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Services\\RobotArena.Services.csproj"
             },
-            "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena\\RobotArena.csproj": {
-              "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena\\RobotArena.csproj"
+            "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena\\RobotArena.csproj": {
+              "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena\\RobotArena.csproj"
             }
           }
         }

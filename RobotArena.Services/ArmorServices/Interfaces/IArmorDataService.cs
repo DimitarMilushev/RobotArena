@@ -13,6 +13,7 @@ namespace RobotArena.Services.ArmorServices.Interfaces
         Task<Armor> GetArmorByIdFromDatabaseAsync(int Id);
         Task<string> EquipArmorAsync(int RobotId, int ArmorId);
         Task<string> UnequipArmorAsync(int RobotId, int ArmorId);
-
+        Task<List<Armor>> GetArmorsForStoreAsync();
+        Task<Armor> GetArmorWithOwnerByIdFromDatabaseAsync(int Id);
     }
 }

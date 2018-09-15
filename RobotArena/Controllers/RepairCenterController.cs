@@ -10,31 +10,45 @@ using Microsoft.EntityFrameworkCore;
 using RobotArena.Data;
 using RobotArena.Models;
 using RobotArena.Common.Models.Repair;
+using RobotArena.Services.UserSerices;
+using RobotArena.Services.WeaponServices.Interfaces;
+using RobotArena.Services.ArmorServices.Interfaces;
+using RobotArena.Services.RobotServices.Interfaces;
+using RobotArena.Services.ContextServices.Interfaces;
 
 namespace RobotArena.Controllers
 {
     [Authorize]
     public class RepairCenterController : Controller
     {
-        private readonly UserManager<User> userManager;
-        private RobotContext context;
+        private readonly UserManager<User> userManager;      
+        private readonly IUserDataService userDataService;
+        private readonly IWeaponDataService weaponDataService;
+        private readonly IArmorDataService armorDataService;
+        private readonly IRobotDataService robotDataService;
+        private readonly IDbContextService dbContextService;
         private readonly IMapper Mapper;
 
-        public RepairCenterController(UserManager<User> userManager, RobotContext context, IMapper mapper)
+        public RepairCenterController(UserManager<User> userManager, IMapper mapper, IDbContextService dbContextService,IRobotDataService robotDataService,IArmorDataService armorDataService,IWeaponDataService weaponDataService,IUserDataService userDataService)
         {
-            this.userManager = userManager;
-            this.context = context;
+            this.userManager = userManager;           
+            this.userDataService = userDataService;
+            this.weaponDataService = weaponDataService;
+            this.armorDataService = armorDataService;
+            this.robotDataService = robotDataService;
+            this.dbContextService = dbContextService;
             this.Mapper = mapper;
         }
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var currentUser = userManager.GetUserAsync(HttpContext.User).Result;
-            var user = context.Users.Include(r=>r.Robots).Include(a => a.Armors).Include(w => w.Weapons).FirstOrDefault(u => u.Id == currentUser.Id);
+            var currentUser = await userManager.GetUserAsync(HttpContext.User);
+            var user = await userDataService.GetCurrentUserWithItemsAndRobotsAsync(currentUser);
             if (user == null)
             {
                 return NotFound();
             }
+          
             var robots = user.Robots.Where(r=>r.CurrentHealth!=r.BaseHealth).ToList();
             var weapons = user.Weapons.Where(w=>w.Durability!=100).ToList();
             var armors = user.Armors.Where(a => a.Durability != 100).ToList();
@@ -52,12 +66,12 @@ namespace RobotArena.Controllers
             return this.View(repairModel);
         }
         [HttpPost]
-        public IActionResult Repair(int itemId,string itemType)
+        public async Task<IActionResult> Repair(int itemId,string itemType)
         {
           
             if(itemType=="ArmorRepairViewModel")
             {
-               var model = context.Armors.Include(a=>a.User).FirstOrDefault(a => a.Id == itemId);
+                var model = await armorDataService.GetArmorWithOwnerByIdFromDatabaseAsync(itemId);
                 if (model == null)
                 {
                     return NotFound();
@@ -68,7 +82,7 @@ namespace RobotArena.Controllers
                 {
                     user.Coins -= repairPrice;
                     model.Durability = 100;
-                    context.SaveChanges();                    
+                    dbContextService.SaveChanges();                   
                         TempData["RepairSuccess"] = $"Succesfully repaired {model.Name}";                    
                     return RedirectToAction("Index");
                 }
@@ -78,7 +92,7 @@ namespace RobotArena.Controllers
             }
             else if (itemType == "WeaponRepairViewModel")
             {
-                var model = context.Weapons.Include(a => a.User).FirstOrDefault(w => w.Id == itemId);
+                var model = await weaponDataService.GetWeaponWithOwnerByIdFromDatabaseAsync(itemId);
                 if (model == null)
                 {
                     return NotFound();
@@ -90,7 +104,7 @@ namespace RobotArena.Controllers
                     user.Coins -= repairPrice;
                     model.Durability = 100;
                     model.CriticalAttackMode = true;
-                    context.SaveChanges();
+                    dbContextService.SaveChanges();
                     TempData["RepairSuccess"] = $"Succesfully repaired {model.Name}";
                     return RedirectToAction("Index");
                 }
@@ -100,7 +114,7 @@ namespace RobotArena.Controllers
             }
             else if(itemType=="RobotRepairViewModel")
             {
-                var model = context.Robots.Include(r=>r.Owner).FirstOrDefault(w => w.Id == itemId);
+                var model = await robotDataService.GetRobotWithOwnerByIdFromDatabaseAsync(itemId);
                 if (model == null)
                 {
                     return NotFound();
@@ -111,7 +125,7 @@ namespace RobotArena.Controllers
                 {
                     user.Coins -= repairPrice;
                     model.CurrentHealth = model.BaseHealth;
-                    context.SaveChanges();
+                    dbContextService.SaveChanges();
                     TempData["RepairSuccess"] = $"Succesfully repaired {model.Name}";
                     return RedirectToAction("Index");
                 }

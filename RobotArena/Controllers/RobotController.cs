@@ -61,9 +61,7 @@ namespace RobotArena.Controllers
 
             
           robotDataService.CreateRobotAsync(HttpContext.User, robot);
-            //user.Robots.Add(robot);
-            //this.context.Add(robot);
-            //this.context.SaveChanges();
+       
 
             return RedirectToAction("Edit",new { Id = robot.Id });
         }
@@ -109,44 +107,7 @@ namespace RobotArena.Controllers
             {
                 return NotFound();
             }
-            //var m = context.Robots.Include(r => r.Armors).Include(r => r.Weapons).FirstOrDefault(r => r.Id == Id);
 
-
-            //var robotViewModel = new RobotDetailsViewModel
-            //{
-            //    Id = m.Id,
-            //    Name = m.Name,
-            //    Type = m.Type,
-            //    Armor=m.Armor,
-            //    ImageUrl = m.ImageUrl,
-            //    BaseHealth = m.BaseHealth,
-            ////    CurrentHealth = m.CurrentHealth,
-            //    BaseDamage = m.BaseDamage,
-            //    TotalDamage=m.TotalDamage,
-            //    Wins = m.Wins,
-            //    Losses = m.Losses,
-            //    DamageReduction = m.DamageReduction,
-            //    RankPlace = m.RankPlace,
-            //    Armors = m.Armors.Select(a => new ArmorDetailsViewModel
-            //    { Id = a.Id,
-            //    Name=a.Name,
-            //        ArmorPoints = a.ArmorPoints,
-            //        CurrentArmor=a.CurrentArmor,
-            //        ImageUrl=a.ImageUrl,
-            //        Durability = a.Durability
-            //    }),
-            //    Weapons = m.Weapons.Select(w => new WeaponDetailsViewModel
-            //    {
-            //       Id = w.Id,
-            //        Name = w.Name,
-            //        ImageUrl=w.ImageUrl,
-            //        DamagePoints = w.DamagePoints,
-            //        CurrentDamage=w.CurrentDamage,
-            //        Durability = w.Durability,
-            //        CriticalAttackMode = w.CriticalAttackMode
-            //    }).ToList()
-
-            //};
 
             return this.View(robotViewModel);
         }
@@ -158,41 +119,7 @@ namespace RobotArena.Controllers
             {
                 return NotFound();
             }
-            /*  var m = context.Robots.Include(r=>r.Weapons).Include(r=>r.Armors).FirstOrDefault(r => r.Id == Id);         
-             //TODO MAPPER
-              var robotViewModel = new RobotDetailsViewModel
-              {
-                  Id = m.Id,              
-                  Name = m.Name,
-                  Type = m.Type,
-                  ImageUrl = m.ImageUrl,
-                  BaseHealth = m.BaseHealth,
-                  BaseDamage = m.BaseDamage,
-                  Wins = m.Wins,
-                  Losses = m.Losses,
-                  DamageReduction = m.DamageReduction,
-                  RankPlace = m.RankPlace,
-                  Armors = m.Armors.Select(a => new ArmorDetailsViewModel
-                  {
-                      Id = a.Id,
-                      Name = a.Name,
-                      ArmorPoints = a.ArmorPoints,
-                    CurrentArmor=a.CurrentArmor,
-                      ImageUrl = a.ImageUrl,
-                      Durability = a.Durability
-                  }),
-                  Weapons = m.Weapons.Select(w => new WeaponDetailsViewModel
-                  {
-                      Id = w.Id,
-                      Name = w.Name,
-                      ImageUrl = w.ImageUrl,
-                      DamagePoints = w.DamagePoints,
-                      CurrentDamage=w.CurrentDamage,
-                      Durability = w.Durability,
-                      CriticalAttackMode = w.CriticalAttackMode
-                  }).ToList()
-
-              };*/
+           
             return this.View(robotViewModel);
         }
 

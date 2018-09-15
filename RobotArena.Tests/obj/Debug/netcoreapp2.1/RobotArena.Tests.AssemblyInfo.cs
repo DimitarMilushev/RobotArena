@@ -11,11 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Common", "RobotArena.Common.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Data", "RobotArena.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena", "RobotArena.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Models", "RobotArena.Models.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Services", "RobotArena.Services.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Common", "RobotArena.Common.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Data", "RobotArena.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena", "RobotArena.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Models", "RobotArena.Models.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RobotArena.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Services", "RobotArena.Services.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("RobotArena.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

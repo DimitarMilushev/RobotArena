@@ -22,6 +22,9 @@ using RobotArena.Services.WeaponServices.Interfaces;
 using RobotArena.Services.CreepServices.Interfaces;
 using RobotArena.Services.WeaponServices;
 using RobotArena.Services.CreepServices;
+using RobotArena.Services.UserSerices;
+using RobotArena.Services.ContextServices.Interfaces;
+using RobotArena.Services.ContextServices;
 
 namespace RobotArena
 {
@@ -105,6 +108,8 @@ namespace RobotArena
             services.AddScoped<IArmorDataService, ArmorDataService>();
             services.AddScoped<IWeaponDataService, WeaponDataService>();
             services.AddScoped<ICreepDataService, CreepDataService>();
+            services.AddScoped<IUserDataService, UserDataService>();
+            services.AddScoped<IDbContextService, DbContextService>();
         }
     }
 }

@@ -11,5 +11,7 @@ namespace RobotArena.Services.WeaponServices.Interfaces
         Task<Weapon> GetWeaponByIdFromDatabaseAsync(int Id);
         Task<string> UnequipWeaponAsync(int RobotId, int WeaponId);
         Task<string> EquipWeaponAsync(int RobotId, int WeaponId);
+        Task<List<Weapon>> GetWeaponsForStoreAsync();
+        Task<Weapon> GetWeaponWithOwnerByIdFromDatabaseAsync(int Id);
     }
 }

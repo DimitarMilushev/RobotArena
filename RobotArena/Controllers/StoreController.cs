@@ -10,21 +10,30 @@ using RobotArena.Data;
 using RobotArena.Models;
 using RobotArena.Common.Models.Armor;
 using RobotArena.Common.Models.Weapon;
+using RobotArena.Services.WeaponServices.Interfaces;
+using RobotArena.Services.ArmorServices.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using RobotArena.Services.ContextServices.Interfaces;
 
 namespace RobotArena.Controllers
 {
     [Authorize]
     public class StoreController : Controller
     {
-        private readonly UserManager<User> userManager;
-        private RobotContext context;
+        private readonly UserManager<User> userManager;       
         private readonly IMapper Mapper;
+        private readonly IWeaponDataService weaponDataService;
+        private readonly IArmorDataService armorDataService;
+        private readonly IDbContextService dbContextService;
 
-        public StoreController(UserManager<User> userManager, RobotContext context, IMapper mapper)
+        public StoreController(UserManager<User> userManager,IWeaponDataService weaponDataService,IArmorDataService armorDataService,IDbContextService dbContextService, IMapper mapper)
         {
-            this.userManager = userManager;
-            this.context = context;
+            this.userManager = userManager;            
+         
             this.Mapper = mapper;
+            this.weaponDataService = weaponDataService;
+            this.armorDataService = armorDataService;
+            this.dbContextService = dbContextService;
         }
 
         [HttpGet]
@@ -34,23 +43,23 @@ namespace RobotArena.Controllers
             return this.View();
         }
         [HttpGet]
-        public IActionResult Weapons()
+        public async Task<IActionResult> Weapons()
         {
-            var weapons = this.context.Weapons.Where(w=>w.UserId==null).ToList();
+            var weapons = await weaponDataService.GetWeaponsForStoreAsync();         
             var model = Mapper.Map<IEnumerable<WeaponDetailsViewModel>>(weapons);
             return this.View(model);
         }
         [HttpGet]
-        public IActionResult Armors()
+        public async Task<IActionResult> Armors()
         {
-            var armors = this.context.Armors.Where(a => a.UserId == null).ToList();
+            var armors = await armorDataService.GetArmorsForStoreAsync();
             var model = Mapper.Map<IEnumerable<ArmorDetailsViewModel>>(armors);
             return this.View(model);
         }
         [HttpGet]
-        public IActionResult BuyWeapon(int Id)
+        public async Task<IActionResult> BuyWeapon(int Id)
         {
-            var weapon = context.Weapons.FirstOrDefault(w => w.Id == Id);
+            var weapon = await weaponDataService.GetWeaponByIdFromDatabaseAsync(Id);
             if (weapon == null)
             {
                 return NotFound();
@@ -60,14 +69,15 @@ namespace RobotArena.Controllers
         }
         [HttpPost]
         [ActionName("BuyWeapon")]
-        public IActionResult BuyWeaponPost(int Id)
+        public async Task<IActionResult> BuyWeaponPost(int Id)
         {
-            var weapon = context.Weapons.FirstOrDefault(w => w.Id == Id);
+            var weapon = await weaponDataService.GetWeaponByIdFromDatabaseAsync(Id);
             if (weapon == null)
             {
                 return NotFound();
             }
-            var user = userManager.GetUserAsync(HttpContext.User).Result;
+            //TODO await on all methods
+            var user = await userManager.GetUserAsync(HttpContext.User);
             var userCoins = user.Coins;
             var weaponPrice = weapon.Price;
             if (userCoins>=weaponPrice)
@@ -75,7 +85,7 @@ namespace RobotArena.Controllers
                 user.Weapons.Add(weapon);
                 user.Coins -= weaponPrice;
                 weapon.UserId = user.Id;
-                context.SaveChanges();
+                dbContextService.SaveChanges();
                 TempData["Message"] = $"Successfully bought {weapon.Name}";
                 return RedirectToAction("Weapons");
             }
@@ -84,9 +94,9 @@ namespace RobotArena.Controllers
             return RedirectToAction("Weapons");
         }
         [HttpGet]
-        public IActionResult BuyArmor(int Id)
+        public async Task<IActionResult> BuyArmor(int Id)
         {
-            var armor = context.Armors.FirstOrDefault(a => a.Id == Id);
+            var armor = await armorDataService.GetArmorByIdFromDatabaseAsync(Id);
             if (armor == null)
             {
                 return NotFound();
@@ -96,12 +106,12 @@ namespace RobotArena.Controllers
         }
         [HttpPost]
         [ActionName("BuyArmor")]
-        public IActionResult BuyArmorPost(int Id)
+        public async Task<IActionResult> BuyArmorPost(int Id)
         {
-           
-            var user = userManager.GetUserAsync(HttpContext.User).Result;
+//TODO await instead of Result           
+            var user = await userManager.GetUserAsync(HttpContext.User);
             var userCoins = user.Coins;
-            var armor = context.Armors.FirstOrDefault(a => a.Id == Id);
+            var armor = await armorDataService.GetArmorByIdFromDatabaseAsync(Id);
             if (armor == null)
             {
                 return NotFound();
@@ -112,7 +122,7 @@ namespace RobotArena.Controllers
                 user.Armors.Add(armor);
                 user.Coins -= armorPrice;
                 armor.UserId = user.Id;
-                context.SaveChanges();
+                dbContextService.SaveChanges();
                 TempData["Message"] = $"Successfully bought {armor.Name}";
                 return RedirectToAction("Armors");
             }
@@ -121,9 +131,9 @@ namespace RobotArena.Controllers
             return RedirectToAction("Armors");
         }
         [HttpGet]
-        public IActionResult SellWeapon(int Id)
+        public async Task<IActionResult> SellWeapon(int Id)
         {
-            var weapon = context.Weapons.FirstOrDefault(w => w.Id == Id);
+            var weapon = await weaponDataService.GetWeaponByIdFromDatabaseAsync(Id);
             if (weapon == null)
             {
                 return NotFound();
@@ -133,14 +143,14 @@ namespace RobotArena.Controllers
         }
         [HttpPost]
         [ActionName("SellWeapon")]
-        public IActionResult SellWeaponPost(int Id)
+        public async Task<IActionResult> SellWeaponPost(int Id)
         {
-            var weapon = context.Weapons.FirstOrDefault(w => w.Id == Id);
+            var weapon = await weaponDataService.GetWeaponByIdFromDatabaseAsync(Id);
             if (weapon == null)
             {
                 return NotFound();
             }
-            var user = context.Users.FirstOrDefault(u => u.Id == weapon.UserId);
+                 var user = await userManager.GetUserAsync(HttpContext.User);
             if (user == null)
             {
                 return NotFound();
@@ -149,14 +159,14 @@ namespace RobotArena.Controllers
             weapon.RobotId = null;
             user.Coins += weaponReturnPrice;
             user.Weapons.Remove(weapon);
-            context.SaveChanges();
+            dbContextService.SaveChanges();
             TempData["Sell"] = $"Successfully sold {weapon.Name}";
             return RedirectToAction("Items", "Users");
         }
         [HttpGet]
-        public IActionResult SellArmor(int Id)
+        public async Task<IActionResult> SellArmor(int Id)
         {
-            var armor = context.Armors.FirstOrDefault(a => a.Id == Id);
+            var armor = await armorDataService.GetArmorByIdFromDatabaseAsync(Id);
             if (armor == null)
             {
                 return NotFound();
@@ -166,14 +176,14 @@ namespace RobotArena.Controllers
         }
         [HttpPost]
         [ActionName("SellArmor")]
-        public IActionResult SellArmorPost(int Id)
+        public async Task<IActionResult> SellArmorPost(int Id)
         {
-            var armor = context.Armors.FirstOrDefault(a => a.Id == Id);
+            var armor = await armorDataService.GetArmorByIdFromDatabaseAsync(Id);
             if (armor == null)
             {
                 return NotFound();
             }
-            var user = context.Users.FirstOrDefault(u => u.Id == armor.UserId);
+            var user = await userManager.GetUserAsync(HttpContext.User);
             if (user == null)
             {
                 return NotFound();
@@ -182,7 +192,7 @@ namespace RobotArena.Controllers
             user.Coins += armorReturnPrice;
             armor.RobotId = null;
             user.Armors.Remove(armor);
-            context.SaveChanges();
+            dbContextService.SaveChanges();
            
                 TempData["Sell"] = $"Successfully sold {armor.Name}";
             

@@ -14,28 +14,35 @@ using RobotArena.Common.Models.Fight;
 using RobotArena.Common.Models.Robot;
 using RobotArena.Models;
 using RobotArena.Services.RobotServices.Interfaces;
+using RobotArena.Services.WeaponServices.Interfaces;
+using RobotArena.Services.CreepServices.Interfaces;
+using RobotArena.Services.ContextServices.Interfaces;
 
 namespace RobotArena.Controllers
 {
     [Authorize]
     public class BattleController : Controller
     {
-        private readonly IRobotDataService robotDataService;
-        private readonly UserManager<User> userManager;
-        private RobotContext context;
+        private readonly IRobotDataService robotDataService;    
+        private readonly ICreepDataService creepDataService;
+        private readonly IDbContextService dbContextService;
+        private readonly UserManager<User> userManager;       
+     
         private readonly IMapper Mapper;
-        public BattleController(UserManager<User> usermanager, RobotContext roboContext, IMapper mapper,IRobotDataService robotDataService)
+        public BattleController(UserManager<User> usermanager, IMapper mapper,IRobotDataService robotDataService,ICreepDataService creepDataService,IDbContextService dbContextService)
         {
             this.userManager = usermanager;
-            this.context = roboContext;
+            
             this.Mapper = mapper;
             this.robotDataService = robotDataService;
+            this.creepDataService = creepDataService;
+            this.dbContextService = dbContextService;
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var creeps = this.context.Creeps.ToList();
+            var creeps = await creepDataService.GetAllCreepsAsync();
             var model = Mapper.Map<IEnumerable<CreepDetailsViewModel>>(creeps);
             return this.View(model);
         }
@@ -54,15 +61,16 @@ namespace RobotArena.Controllers
             return this.View(model);
         }
         [HttpPost]
-        public IActionResult Fight(int RobotId,int CreepId)
+        public async Task<IActionResult> Fight(int RobotId,int CreepId)
         {
            
-            var robot = context.Robots.Include(r=>r.Weapons).Include(r=>r.Armors).FirstOrDefault(r => r.Id == RobotId);
+            var robot = await robotDataService.GetRobotWithAllItemsByIdAsync(RobotId);
+           
             if (robot == null)
             {
                 return NotFound();
             }
-            var creep = context.Creeps.FirstOrDefault(c => c.Id == CreepId);
+            var creep = await creepDataService.GetCreepByIdAsync(CreepId);
             if (robot == null)
             {
                 return NotFound();
@@ -143,10 +151,9 @@ namespace RobotArena.Controllers
             robot.Weapons.ToList().ForEach(w => w.RemoveCriticalStrike());
             robot.Armors.ToList().ForEach(a => a.ReduceDurability());
 
-            context.Robots.Update(robot);
-         //   context.Users.Update(user);
-            context.SaveChanges();
-
+            //  context.Robots.Update(robot);
+            //   context.Users.Update(user);
+            dbContextService.SaveChanges();
             return View("Result",fightResultModel);
         }
         public IActionResult Result()

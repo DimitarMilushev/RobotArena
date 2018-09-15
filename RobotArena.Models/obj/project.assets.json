@@ -1158,11 +1158,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Models\\RobotArena.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Models\\RobotArena.Models.csproj",
       "projectName": "RobotArena.Models",
-      "projectPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Models\\RobotArena.Models.csproj",
+      "projectPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Models\\RobotArena.Models.csproj",
       "packagesPath": "C:\\Users\\Lubomir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lubomir\\Desktop\\Project Defense\\RobotArena-master\\RobotArena.Models\\obj\\",
+      "outputPath": "C:\\Users\\Lubomir\\Desktop\\RobotArena-master\\RobotArena.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

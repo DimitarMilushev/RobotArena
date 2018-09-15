@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using RobotArena.Services.UserSerices;
 
 namespace RobotArena.Controllers
 {
@@ -20,23 +21,25 @@ namespace RobotArena.Controllers
     public class UsersController:Controller
     {
         private readonly UserManager<User> userManager;
-        private RobotContext context;
+        
         private readonly IMapper Mapper;
-        public UsersController(UserManager<User> usermanager, RobotContext roboContext,IMapper mapper)
+        private readonly IUserDataService userDataService;
+        public UsersController(UserManager<User> usermanager,IUserDataService userDataService,IMapper mapper)
         {
             this.userManager = usermanager;
-            this.context = roboContext;
+           
             this.Mapper = mapper;
+            this.userDataService = userDataService;
         }
       [HttpGet]
-        public IActionResult AllRobots()
+        public async Task<IActionResult> AllRobots()
         {
            // var courses = await this.DbContext.Courses.ToListAsync();
            // var modelCourses = this.Mapper.Map<IEnumerable<CourseConciseViewModel>>(courses);
 
-            var user = userManager.GetUserAsync(HttpContext.User).Result;
+            var user = await userManager.GetUserAsync(HttpContext.User);
 
-            var currentUser = context.Users.Include(u => u.Robots).FirstOrDefault(u => u.Id == user.Id);
+            var currentUser = await userDataService.GetCurrentUserWithRobotsAsync(user);
             if (currentUser == null)
             {
                 return NotFound();
@@ -46,11 +49,11 @@ namespace RobotArena.Controllers
             return this.View(detailRobots);
         }
         [HttpGet]
-       public IActionResult Items()
+       public async Task<IActionResult> Items()
         {
-            var user = userManager.GetUserAsync(HttpContext.User).Result;
-           
-            var userWithWeaponsAndArmors = context.Users.Include(u=>u.Weapons).Include(u=>u.Armors).FirstOrDefault(u => u.Id == user.Id);
+            var user = await userManager.GetUserAsync(HttpContext.User);
+
+            var userWithWeaponsAndArmors = await userDataService.GetCurrentUserWithItemsAsync(user);
             if (userWithWeaponsAndArmors == null)
             {
                 return NotFound();
