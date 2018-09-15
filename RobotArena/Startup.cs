@@ -58,13 +58,13 @@ namespace RobotArena
 
             services.AddAuthentication().AddFacebook(facebookOptions =>
             {
-                facebookOptions.AppId ="1388625917906496";
-                facebookOptions.AppSecret = "d1198ba2a96ab29314e17cefa416c0b6";
+                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
             });
             services.AddAuthentication().AddGoogle(googleOptions =>
             {
-                googleOptions.ClientId = "502775552441-l9mobbpf2osoiru7e652i0saefvjgstj.apps.googleusercontent.com";
-                googleOptions.ClientSecret ="cemylM-t3iFA1pjXUiiPOY0q";
+                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
             });
             services.AddAutoMapper();
             RegisterServiceLayer(services);
